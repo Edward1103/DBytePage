@@ -1,93 +1,123 @@
-/*<style>*/
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #1E90FF; /* Fondo azul similar al logo */
-            color: #FFFFFF; /* Texto blanco */
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: linear-gradient(135deg, #1E90FF, #87CEFA, #4682B4);
-            /* background: linear-gradient(135deg, #1E90FF, #00BFFF);  Degradado similar al logo */
-        }
-        .container {
-            text-align: center;
-            padding: 50px 20px;
-            max-width: 100%;
-        }
-        h1 {
-            color: #FFFFFF; /* Título en blanco */
-            margin-top: 20px; /* Añadir espacio sobre el título */
-        }
-        p {
-            font-size: 1.2em;
-            color: #F0F8FF; /* Texto de introducción en azul claro */
-        }
-        .paragraph-with-spacing {
-            margin-bottom: 20px; /* Espacio entre párrafos */
-        }
-        .highlighted-text {
-            font-size: 1.2em;
-            color: #FFFFFF;
-            margin-top: 20px;
-        }
-        .logo {
-            width: 80%;
-            max-width: 400px;
-            height: auto;
-            margin: 30px auto 30px auto; /* Baja el logo 30px desde arriba y lo centra */
-        }
-        .cta-button {
-            background-color: #1E90FF; /* Azul del logo */
-            color: #FFFFFF;
-            padding: 15px 30px;
-            text-decoration: none;
-            font-size: 1.2em;
-            border-radius: 5px;
-            margin-top: 20px;
-            display: inline-block;
-            transition: background-color 0.3s ease; /* Transición suave al pasar el mouse */
-        }
-        .cta-button:hover {
-            background-color: #00008B; /* Azul oscuro (azul negro) al pasar el mouse */
-        }
-        footer {
-            margin-top: 40px;
-            font-size: 0.9em;
-            color: #00008B; /* Azul oscuro (azul negro) */
-        }
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    background-size: 400% 400%;
+    animation: backgroundAnimation 10s infinite alternate;
+    text-align: center;
+    color: white;
+}
 
-        /* Responsividad para pantallas pequeñas */
-        @media (max-width: 768px) {
-            body {
-                flex-direction: column;
-                padding: 10px;
-            }
-            .container {
-                padding: 20px 10px;
-            }
-            p, .highlighted-text {
-                font-size: 1.2em;
-            }
-            .cta-button {
-                padding: 12px 25px;
-                font-size: 1.2em;
-            }
-        }
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
 
-        /* Responsividad para pantallas muy pequeñas (teléfonos en modo vertical) */
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.5em;
-            }
-            p, .highlighted-text {
-                font-size: 1.2em;
-            }
-            .cta-button {
-                font-size: 1.1em;
-                padding: 10px 20px;
-            }
-        }
-    /*</style>*/
+/* Navegación */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+nav .logo {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    background: linear-gradient(90deg, rgba(255,255,255,0.9), rgba(200,200,255,0.8));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textFadeIn 2s ease-in-out;
+}
+
+@keyframes textFadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: rgba(0, 123, 255, 0.8);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: rgba(0, 86, 179, 0.8);
+    transform: scale(1.1);
+}
+
+/* Servicios */
+.service-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.service-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: transform 0.3s;
+    color: white;
+}
+
+.service-box:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
