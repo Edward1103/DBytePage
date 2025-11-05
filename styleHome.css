@@ -290,3 +290,51 @@ html{
     font-weight: 500;
 
  }
+
+ /* CATEGORIES */
+
+ .top-categories{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+ }
+
+ .container-categories{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+ }
+
+ .card-category{
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    gap: 2rem
+    ;
+ }
+
+ .category-espe1{
+    background-image: linear-gradient(#00000080, #00000080), url('Img/Keyboard.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+
+ .category-espe2{
+    background-image: linear-gradient(#00000080, #00000080), url('Img/Headset.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+
+ .cateogory-espe3{
+    background-image: linear-gradient(#00000080, #00000080), url('Img/Mouse.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+ }
